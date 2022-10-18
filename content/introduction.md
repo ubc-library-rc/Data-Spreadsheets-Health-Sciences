@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Introduction
 nav_order: 4
+title: Workshop Content
+has_children: true
+has_toc: false
 ---
-# Introduction
+# Workshop Content
 Placeholder for first page of lesson
