@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Outline
+title: Intro & Setup
 nav_order: 1
 ---
 
