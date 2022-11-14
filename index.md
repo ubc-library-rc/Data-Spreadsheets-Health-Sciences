@@ -63,17 +63,3 @@ macOS users who use Apple's Numbers application should note that it does not con
    * pacman (Arch): `pacman -S libreoffice`
    * yum (Fedora, CentOS): `yum install libreoffice`
    * apt (Debian, Ubuntu): `apt install libreoffice`
-
-
-## Schedule
-
-|      |  | Setup |  |Download files required for the lesson|
-| 0:00 |  | 1. Introduction |  | What are basic principles for using spreadsheets for good data organization? |
-| 0:18 |  | 2. Formatting data tables in spreadsheets |  | How do we format data in spreadsheets for effective data use? |
-| 0:53 |  | 3. Formatting problems |  | What are some common challenges with formatting data in spreadsheets and how can we avoid them? |
-| 1:13 |  | 4. Dates as data |  | What are good approaches for handling dates in spreadsheets? |  
-| 1:26 |  | 5. Quality control |  | How can we carry out basic quality control and quality assurance in spreadsheets? |
-| 1:46 |  | 6. Exporting data |  | How can we export data from spreadsheets in a way that is useful for downstream applications? |
-| 1:56 |  | Finish |
-
-
