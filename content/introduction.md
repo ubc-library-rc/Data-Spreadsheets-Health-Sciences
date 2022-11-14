@@ -46,7 +46,7 @@ Data analysis in spreadsheets usually requires a lot of manual work. If you want
 
 It is also difficult to track or reproduce statistical or plotting analyses done in spreadsheet programs when you want to go back to your work or someone asks for details of your analysis.
 
-##Exercise 
+> ###Exercise 
 
 How many people have used spreadsheets in their research?
 How many people have accidentally done something that made them frustrated or sad?
@@ -81,7 +81,7 @@ Formatting problems
 Dates as data
 Quality control
 
-##Key Points
+> ###Key Points
 
 Good data organization is the foundation of any research project.
 
