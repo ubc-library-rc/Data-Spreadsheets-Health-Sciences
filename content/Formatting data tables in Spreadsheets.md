@@ -11,11 +11,11 @@ Using the power of computers, we can manage and analyze data in much more effect
 
 This is why it’s extremely important to set up well-formatted tables from the outset - before you even start entering data from your very first preliminary experiment. Data organization is the foundation of your research project. It can make it easier or harder to work with your data throughout your analysis, so it’s worth thinking about when you’re doing your data entry or setting up your experiment. You can set things up in different ways in spreadsheets, but some of these choices can limit your ability to work with the data in other programs or have the you-of-6-months-from-now or your collaborator work with the data.
 
-##Note
+## Note
 
 The best layouts/formats (as well as software and interfaces) for data entry and data analysis might be different. It is important to take this into account, and ideally automate the conversion from one to another.
 
-##Keeping track of your analyses
+## Keeping track of your analyses
 
 When you’re working with spreadsheets, during data clean up or analyses, it’s very easy to end up with a spreadsheet that looks very different from the one you started with. In order to be able to reproduce your analyses or figure out what you did when Reviewer #3 asks for a different analysis, you should
 
@@ -28,11 +28,11 @@ This might be an example of a spreadsheet setup:
 
 PICTURE NEEDED
 
-##Note
+## Note
 
 This is out of scope for this lesson, but for information on how to maintain version control over your data, look at our lesson on ‘Git’. https://swcarpentry.github.io/git-novice/ NEED TO HYPERLINK
 
-##Structuring data in spreadsheets
+## Structuring data in spreadsheets
 
 The cardinal rules of using spreadsheet programs for data:
 
@@ -57,7 +57,7 @@ So, instead we should have:
 
 NEED PICTURE
 
-##Exercise
+## Exercise
 
 We’re going to take a messy version of the study data and describe how we would clean it up.
 
@@ -69,6 +69,6 @@ Important (HOW TO BOLD) Do not forget our first piece of advice: to create a new
 
 After you go through this exercise, we’ll discuss as a group what was wrong with this data and how you would fix it.
 
-##Solution (HOW TO MAKE THIS HIDDEN AND A DIFFERENT COLOUR)
+## Solution (HOW TO MAKE THIS HIDDEN AND A DIFFERENT COLOUR)
 
 
