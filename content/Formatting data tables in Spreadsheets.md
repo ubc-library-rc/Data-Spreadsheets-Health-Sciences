@@ -45,6 +45,8 @@ For instance, we have study data defining the progression of Alzheimer’s disea
 
 If they were to keep track of the data like this:
 
+![alttext](/fig/multiple-info.png)
+
 NEED PICTURE
 
 the problem is that AGE and GENDER are in the same field. So, if they wanted to look at all of one GENDER or look at different age distributions, it would be hard to do this using this data setup. If instead we put AGE and GENDER in different columns, you can see that it would be much easier.
