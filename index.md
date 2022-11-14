@@ -4,25 +4,76 @@ title: Intro & Setup
 nav_order: 1
 ---
 
-## Note: this workshop is in development and not yet complete.
+## Data Organization in Spreadsheets for the Health Sciences
 
-Description...
+Good data organization is the foundation of any research project. Most researchers have data in spreadsheets, so it’s the place that many research projects start.
 
-## Learning objectives
+We organize data in spreadsheets in the ways that we as humans want to work with the data, but computers require that data be organized in particular ways. In order to use tools that make computation more efficient, such as programming languages like R or Python, we need to structure our data the way that computers need the data. Since this is where most research projects start, this is where we want to start too!
 
-At the end of this workshop, you will be able to:
-1.
-2.
-3.
+## In this lesson, you will learn:
+
+- Good data entry practices - formatting data tables in spreadsheets
+- How to avoid common formatting mistakes
+- Approaches for handling dates in spreadsheets
+- Basic quality control and data manipulation in spreadsheets
+- Exporting data from spreadsheets
+
+In this lesson, however, you will not learn about data analysis with spreadsheets. Much of your time as a researcher will be spent in the initial ‘data wrangling’ stage, where you need to organize the data to perform a proper analysis later. It’s not the most fun, but it is necessary. In this lesson you will learn how to think about data organization and some practices for more effective data wrangling. With this approach you can better format current data and plan new data collection so less data wranglin
+
+## Pre-Workshop Setup
+
+Download this data file to your computer: https://github.com/UW-Madison-DataScience/dc-health-data/blob/master/processed_data/spreadsheets/ADNI_spreadsheet.xlsx
+
+About the data
+The data for this lesson is a part of the Health Sciences Data Carpentry workshop. It is a teaching version of the Alzheimer’s Disease Neuroimaging Initiative (ADNI) data. The data in this lesson is a subset of the teaching version that has been intentionally ‘messed up’ for this lesson.
+
+The data for this lesson and the workshop are in the Health Sciences Data Carpentry data GitHub repository available on GitHub, with a CC-BY license available for reuse.
+
+The original datasets can be found here and used with approval ADNI Access Data and Samples
+
+#### About the data
+
+This data set requires downloading a DUA form and siging off prior to download. xxxxx etc etc etc
+For more information about the dataset 
+
+### Software
+
+To interact with spreadsheets, we can use LibreOffice, Microsoft Excel, Gnumeric, Onlyoffice, WPS office or other programs. Commands may differ a bit between programs, but the general ideas for thinking about spreadsheets are the same.
+
+**For this lesson, we will mainly use Microsoft Excel.** If you do not have access to Microsoft Excel, you can also use LibreOffice, which is a free, open source spreadsheet program. Many functions will be similar to Excel. 
+
+macOS users who use Apple's Numbers application should note that it does not contain some of the features (particularly data validation) that we will be using. Please use LibreOffice or Microsoft Excel instead.
+
+#### LibreOffice installation (optional)
+
+##### Windows/macOS
+
+- Download the Installer
+- Install LibreOffice by going to [the installation page](https://www.libreoffice.org/download/libreoffice-fresh/). The version for Windows/Mac should automatically be selected. Click Download Version X.X.X (whichever is the most recent version).
+- Install LibreOffice
+- Once the installer is downloaded, double click on it and LibreOffice should install.
+
+##### Linux
+
+- Download the Installer
+- Install LibreOffice by going to [the installation page](https://www.libreoffice.org/download/libreoffice-fresh/). The version for Linux should automatically be selected. Click Download Version X.X.X (whichever is the most recent version).
+- Install LibreOffice
+- Once the installer is downloaded, double click on it and LibreOffice should install.
+- package manager option:
+   * pacman (Arch): `pacman -S libreoffice`
+   * yum (Fedora, CentOS): `yum install libreoffice`
+   * apt (Debian, Ubuntu): `apt install libreoffice`
+
 
 ## Schedule
 
-| 0:00 | Welcome and using Zoom|
-| 0:05 | Introduction |  
-| 0:15 |  |
-| 0:30 |  |   
-| 0:45 |  |
-| 1:00 | Wrap-up and Discussion |
+|      |  | Setup |  |Download files required for the lesson|
+| 0:00 |  | 1. Introduction |  | What are basic principles for using spreadsheets for good data organization? |
+| 0:18 |  | 2. Formatting data tables in spreadsheets |  | How do we format data in spreadsheets for effective data use? |
+| 0:53 |  | 3. Formatting problems |  | What are some common challenges with formatting data in spreadsheets and how can we avoid them? |
+| 1:13 |  | 4. Dates as data |  | What are good approaches for handling dates in spreadsheets? |  
+| 1:26 |  | 5. Quality control |  | How can we carry out basic quality control and quality assurance in spreadsheets? |
+| 1:46 |  | 6. Exporting data |  | How can we export data from spreadsheets in a way that is useful for downstream applications? |
+| 1:56 |  | Finish |
 
-## Resources
-* [eg. link to external slides]
+
