@@ -1,4 +1,4 @@
-# Name of workshop
+# Data Organization in Spreadsheets for the Health Sciences
 ### UBC Library Research Commons
 
 :heavy_exclamation_mark: This workshop is in development and not yet complete. :heavy_exclamation_mark:    
