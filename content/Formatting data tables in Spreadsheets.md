@@ -1,76 +1,167 @@
-## Questions
-How do we format data in spreadsheets for effective data use?
+---
+title: "Quality control"
+teaching: 20
+exercises: 0
+questions:
+- "How can we carry out basic quality control and quality assurance in spreadsheets?"
+objectives:
+- "Apply quality control techniques to identify errors in spreadsheets and limit incorrect data entry."
+keypoints:
+- "Always copy your original spreadsheet file and work with a copy so you don't affect the raw data."
+- "Use data validation to prevent accidentally entering invalid data."
+- "Use sorting to check for invalid data."
+- "Use conditional formatting (cautiously) to check for invalid data."
+---
 
-## Objectives
-- Describe best practices for data entry and formatting in spreadsheets.
-- Apply best practices to arrange variables and observations in a spreadsheet.
+Authors:**Christie Bahlai**, **Aleksandra Pawlik**<br>
 
-The most common mistake made is treating spreadsheet programs like lab notebooks, that is, relying on context, notes in the margin, spatial layout of data and fields to convey information. As humans, we can (usually) interpret these things, but computers don’t view information the same way, and unless we explain to the computer what every single thing means (and that can be hard!), it will not be able to see how our data fits together.
+When you have a well-structured data table, you can use several simple
+techniques within your spreadsheet to ensure the data you enter is
+free of errors. These approaches include techniques that are
+implemented prior to entering data (quality assurance) and
+techniques that are used after entering data to check for errors
+(quality control).
 
-Using the power of computers, we can manage and analyze data in much more effective and faster ways, but to use that power, we have to set up our data for the computer to be able to understand it (and computers are very literal).
+# Quality Assurance
 
-This is why it’s extremely important to set up well-formatted tables from the outset - before you even start entering data from your very first preliminary experiment. Data organization is the foundation of your research project. It can make it easier or harder to work with your data throughout your analysis, so it’s worth thinking about when you’re doing your data entry or setting up your experiment. You can set things up in different ways in spreadsheets, but some of these choices can limit your ability to work with the data in other programs or have the you-of-6-months-from-now or your collaborator work with the data.
+Quality assurance stops bad data from ever being entered by checking to see if
+values are valid during data entry. For example, if research is being conducted
+at sites A, B, and C, then the value V (which is right next to B on the
+keyboard) should never be entered. Likewise if one of the kinds of data being
+collected is a count, only integers greater than or equal to zero should be
+allowed.
 
-## Note
+To control the kind of data entered into a spreadsheet we use Data Validation
+(Excel) or Validity (Libre Office Calc), to set the values that can be entered
+in each data column.
 
-The best layouts/formats (as well as software and interfaces) for data entry and data analysis might be different. It is important to take this into account, and ideally automate the conversion from one to another.
+1\. Select the cells or column you want to validate
 
-## Keeping track of your analyses
+2\. On the `Data` tab select `Data Validation`
 
-When you’re working with spreadsheets, during data clean up or analyses, it’s very easy to end up with a spreadsheet that looks very different from the one you started with. In order to be able to reproduce your analyses or figure out what you did when Reviewer #3 asks for a different analysis, you should
+![Image of Data Validation button on Data tab](../fig/data_validation.png)
 
-- create a new file with your cleaned or analyzed data. Don’t modify the original dataset, or you will never know where you started!
-- keep track of the steps you took in your clean up or analysis. You should track these steps as you would any step in an experiment. 
+3\. In the `Allow` box select the kind of data that should be in the
+   column. Options include whole numbers, decimals, lists of items, dates, and
+   other values.
 
-We recommend that you do this in a plain text file stored in the same folder as the data file.
+![Image of Data Validation window](../fig/data_validation_window.png)
+   
+4\. After selecting an item enter any additional details. For example, if you've
+   chosen a list of values, enter a comma-delimited list of allowable
+   values in the `Source` box.
 
-This might be an example of a spreadsheet setup:
+Let's try this out by setting the plot column in our spreadsheet to only allow
+plot values that are integers between 1 and 24.
 
-PICTURE NEEDED
+1. Select the `VISCODE` column
+2. On the `Data` tab select `Data Validation`
+3. In the `Allow` box select `Whole number`
+4. Set the minimum and maximum values to 1 and 200.
 
-## Note
+![Image of Data Validation window for validating plot values](../fig/plot_validation.png)
 
-This is out of scope for this lesson, but for information on how to maintain version control over your data, look at our lesson on ‘Git’. https://swcarpentry.github.io/git-novice/ NEED TO HYPERLINK
+Now let's try entering a new value in the VISCODE column that isn't a valid
+plot. The spreadsheet stops us from entering the wrong value and asks us if we
+would like to try again.
 
-## Structuring data in spreadsheets
+![Image of error when trying to enter invalid data](../fig/invalid_value.png)
 
-The cardinal rules of using spreadsheet programs for data:
+You can also customize the resulting message to be more informative by entering
+your own message in the `Input Message` tab
 
-Put all your variables in columns - the thing you’re recording, like ‘SITE’ or EXAMDATE’.
-Put each observation in its own row.
-Don’t combine multiple pieces of information in one cell. Sometimes it just seems like one thing, but think if that’s the only way you’ll want to be able to use or sort that data.
-Leave the raw data raw - don’t change it!
-Export the cleaned data to a text-based format like CSV (comma-separated values) format. This ensures that anyone can use the data, and is required by most data repositories.
-For instance, we have study data defining the progression of Alzheimer’s disease. Different people have recorded data into a spreadsheet. They keep track of things like RID, PTID, SITE, VISCODE, EXAMDATE, AGE, GENDER, PTMARRY and TAU collected.
+![Image of Input Message tab](../fig/input_message.png)
 
-If they were to keep track of the data like this:
+or allow invalid data to result in a warning rather than an error by modifying the `Style`
+option on the `Error Alert` tab.
 
-![alttext](/fig/multiple-info.png)
+![Image of Error Alert tab](../fig/error_alert.png)
 
-NEED PICTURE
+Quality assurance can make data entry easier as well as more robust. For
+example, if you use a list of options to restrict data entry, the spreadsheet
+will provide you with a drop-downlist of the available items. So, instead of
+trying to remember which gender codes are available, you can select the
+right option from the list.
 
-the problem is that AGE and GENDER are in the same field. So, if they wanted to look at all of one GENDER or look at different age distributions, it would be hard to do this using this data setup. If instead we put AGE and GENDER in different columns, you can see that it would be much easier.
+![Image of drop-down menu](../fig/drop_down_list.png)
 
-##Columns for variables and rows for observations
+# Quality Control
 
-The rule of thumb, when setting up a datasheet is columns = variables, rows = observations, cells = data (values).
+Tip: *Before doing any quality control operations, save your original file with the formulas and a name indicating it is the original
+data. Create a separate file with appropriate naming and versioning, and ensure your data is stored as values and not as formulas. 
+Because formulas refer to other cells, and you may be moving cells around, you may compromise the integrity of your data if you do not
+take this step!*
 
-So, instead we should have:
+readMe (README) files: As you start manipulating your data files, create a readMe document / text file to keep track of your files and
+document your manipulations so that they may be easily understood and replicated, either by your future self or by an independent
+researcher. Your readMe file should document all of the files in your data set (including documentation), describe their content and
+format, and lay out the organizing principles of folders and subfolders. For each of the separate files listed, it is a good idea to
+document the manipulations or analyses that were carried out on those data. 
+[Cornell University's Research Data Management Service Group](https://data.research.cornell.edu/content/readme) provides detailed
+guidelines for how to write a good readMe file, along with an adaptable template.
 
-NEED PICTURE
+## Sorting
+Bad values often sort to the bottom or top of the column. For example, if your data should be numeric, then alphabetical and null data
+will group at the ends of the sorted data. Sort your data by each field, one at a time. Scan through each column, but pay the most
+attention to the top and the bottom of a column. 
+If your dataset is well-structured and does not contain formulas, sorting should never affect the integrity of your dataset.
 
-## Exercise
+**Remember** to expand your sort in order to prevent data corruption. Expanding your sort ensures that the all the data in one row move together instead of only sorting a single column in isolation. Sorting by only a single column will scramble your data - a single row will no longer represent an individual observation.
 
-We’re going to take a messy version of the study data and describe how we would clean it up.
+> ## Exercise   
+>
+> We've combined all of the tables from the messy data into a single table in a single tab. Download this semi-cleaned data file to your computer: [survey_sorting_exercise](https://github.com/datacarpentry/spreadsheet-ecology-lesson/blob/gh-pages/data/survey_sorting_exercise.xlsx?raw=true)
+>
+> Once downloaded, sort the `Weight_grams` column in your spreadsheet program from `Largest to Smallest`. 
+>
+> What do you notice?
+>
+> > ## Solution
+> > 
+> > Click the Sort button on the data tab in Excel. A pop-up will appear. Make sure you select `Expand the selection`.
+> >
+> > ![quality_control0, exercise1](../fig/sorting_button.png)
+> > {: .output}
+> >
+> > The following window will display, choose the column you want to sort as well as the sort order.
+> >
+> > ![quality_control1, exercise1](../fig/sorting_example.png)
+> > {: .output}
+> > 
+> > 
+> > **Note** how the odd values sort to the top and bottom of the tabular data. 
+> > The cells containing no data values sort to the bottom of the tabular data, while the cells where the letter "g" was included can be found towards the top. This is a powerful way to check your data for outliers and odd values.
+> > 
+> > ![quality_control2, exercise1](../fig/sorting_solution_1.png)
+> > {: .output}
+> >
+> > ![quality_control3, exercise1](../fig/sorting_solution_2.png)
+> > {: .output}
+> > 
+> {: .solution}
+{: .challenge}
 
-Open up the data in a spreadsheet program.
-You can see that there are four tabs. Multiple study assistants recorded the exam data and they kept track of the data in their own way. Now you’re the person in charge of this project and you want to be able to start analyzing the data.
-With the person next to you, identify what is wrong with this spreadsheet. Also discuss the steps you would need to take to clean up the b1, Sheet2, m12 and m18p tabs, and to put them all together in one spreadsheet.
-
-Important (HOW TO BOLD) Do not forget our first piece of advice: to create a new file (or tab) for the cleaned data, never modify your original (raw) data.
-
-After you go through this exercise, we’ll discuss as a group what was wrong with this data and how you would fix it.
-
-## Solution (HOW TO MAKE THIS HIDDEN AND A DIFFERENT COLOUR)
 
 
+## Conditional formatting ##
+Conditional formatting basically can do something like color code your values by some
+criteria or lowest to highest. This makes it easy to scan your data for outliers.
+
+Conditional formatting should be used with caution, but it can be a great way to flag inconsistent values when entering data.
+
+> ## Exercise
+> 1. In the main Excel menu bar, click `Home` > `Conditional Formatting...` choose a formatting rule.
+> 2. Apply a `2-Color Scale` formatting rule with the lowest values set to orange and the highest values set to yellow.
+> 3. Now we can scan through and different colors will stand out. Do you notice any strange values?
+> 
+> > ## Solution
+> > 
+> > Cells that contain non-numerical values are not colored. This includes both the cells where the letter "g" was included and the empty cells. 
+> > ![quality_control4, exercise2](../fig/conditional_formating.png)
+> > {: .output}
+> > 
+> {: .solution}
+{: .challenge} 
+
+It is nice to be able to do these scans in spreadsheets, but we also can do these
+checks in a programming language like R, or in OpenRefine or SQL. 
