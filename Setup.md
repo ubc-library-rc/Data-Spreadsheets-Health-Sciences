@@ -4,7 +4,7 @@ title: Setup
 ---
 
 > ## Data
-> **Download** this data file to your computer: [https://github.com/UW-Madison-DataScience/dc-health-data/blob/master/processed_data/spreadsheets/ADNI_spreadsheet.xlsx](https://github.com/UW-Madison-DataScience/dc-health-data/blob/master/processed_data/spreadsheets/ADNI_spreadsheet.xlsx) 
+> **Download** this data file to your computer: OSF Link
 >
 >
 > #### About the data
