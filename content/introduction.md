@@ -1,87 +1,134 @@
 ---
-layout: default
-nav_order: 4
-title: Workshop Content
-has_children: true
-has_toc: false
+title: "Formatting data tables in Spreadsheets"
+teaching: 15
+exercises: 20
+questions:
+- "How do we format data in spreadsheets for effective data use?"
+objectives:
+- "Describe best practices for data entry and formatting in spreadsheets."
+- "Apply best practices to arrange variables and observations in a spreadsheet."
+keypoints:
+- "Never modify your raw data. Always make a copy before making any changes."  
+- "Keep track of all of the steps you take to clean your data in a plain text file."  
+- "Organize your data according to tidy data principles."  
 ---
-# Workshop Content
-Placeholder for first page of lesson
 
-## Schedule
+The most common mistake made is treating spreadsheet programs like lab notebooks, that is,
+relying on context, notes in the margin,
+spatial layout of data and fields to convey information. As humans, we
+can (usually) interpret these things, but computers don't view information the same way, and
+unless we explain to the computer what every single thing means (and
+that can be hard!), it will not be able to see how our data fits
+together.
+
+Using the power of computers, we can manage and analyze data in much more 
+effective and faster ways, but to use that power, we have to set up
+our data for the computer to be able to understand it (and computers are very 
+literal).
+
+This is why it’s extremely important to set up well-formatted
+tables from the outset - before you even start entering data from
+your very first preliminary experiment. Data organization is the
+foundation of your research project. It can make it easier or harder
+to work with your data throughout your analysis, so it's worth
+thinking about when you're doing your data entry or setting up your
+experiment. You can set things up in different ways in spreadsheets,
+but some of these choices can limit your ability to work with the data in other programs or
+have the you-of-6-months-from-now or your collaborator work with the
+data.
+
+> Note: the best layouts/formats (as well as software and
+> interfaces) for data entry and data analysis might be
+> different. It is important to take this into account, and ideally
+> automate the conversion from one to another.
+
+### Keeping track of your analyses
+
+When you're working with spreadsheets, during data clean up or analyses, it's
+very easy to end up with a spreadsheet that looks very different from the one
+you started with. In order to be able to reproduce your analyses or figure out
+what you did when Reviewer #3 asks for a different analysis, you should
+
+- create a new file with your cleaned or analyzed data. Don't modify
+the original dataset, or you will never know where you started!
+- keep track of the steps you took in your clean up or analysis. You should track 
+these steps as you would any step in an experiment. We recommend that you 
+do this in a plain text file stored in the same folder as the data file. 
+
+This might be an example of a spreadsheet setup:
+
+![spreadsheet setup](https://github.com/UW-Madison-DataScience/spreadsheet-health-lesson/blob/gh-pages/fig/01-format-data_image01.png)
+
+Put these principles in to practice today during your Exercises.
+
+>Note: This is out of scope for this lesson, but for information on how to maintain version control over your data, look at our lesson on ['Git'](http://swcarpentry.github.io/git-novice/).
 
 
-         Setup	Download files required for the lesson
-00:00	1. Introduction	What are basic principles for using spreadsheets for good data organization?
-00:18	2. Formatting data tables in Spreadsheets	How do we format data in spreadsheets for effective data use?
-00:53	3. Formatting problems	What are some common challenges with formatting data in spreadsheets and how can we avoid them?
-01:13	4. Dates as data	What are good approaches for handling dates in spreadsheets?
-01:26	5. Quality control	How can we carry out basic quality control and quality assurance in spreadsheets?
-01:46	6. Exporting data	How can we export data from spreadsheets in a way that is useful for downstream applications?
-01:56	Finish
+### Structuring data in spreadsheets
 
-##Spreadsheet outline
 
-After this lesson, you will be able to:
+The cardinal rules of using spreadsheet programs for data:
 
-Implement best practices in data table formatting
-Identify and address common formatting mistakes
-Understand approaches for handling dates in spreadsheets
-Utilize basic quality control features and data manipulation practices
-Effectively export data from spreadsheet programs
-Overall good data practices
+1. Put all your variables in columns - the thing you're recording, like 'SITE' or EXAMDATE'.
+2. Put each observation in its own row.
+3. Don't combine multiple pieces of information in one
+   cell. Sometimes it just seems like one thing, but think if that's
+   the only way you'll want to be able to use or sort that data.
+4. Leave the raw data raw - don't change it!
+5. Export the cleaned data to a text-based format like CSV (comma-separated values) format. This
+   ensures that anyone can use the data, and is required by
+   most data repositories.
 
-Spreadsheets are good for data entry. Therefore we have a lot of data in spreadsheets. Much of your time as a researcher will be spent in this ‘data wrangling’ stage. It’s not the most fun, but it’s necessary. We’ll teach you how to think about data organization and some practices for more effective data wrangling.
+For instance, we have study data defining the progression of Alzheimer's disease. Different people have recorded data into a spreadsheet. They keep track of things like RID, PTID, SITE, VISCODE, EXAMDATE, AGE, GENDER, PTMARRY and TAU collected. 
 
-##What this lesson will not teach you 
+If they were to keep track of the data like this:
 
-How to do statistics in a spreadsheet
-How to do plotting in a spreadsheet
-How to write code in spreadsheet programs
-If you’re looking to do this, a good reference is Head First Excel, published by O’Reilly
+![multiple-info example](../fig/01-format-data-image02.png))
 
-##Why aren’t we teaching data analysis in spreadsheets
+the problem is that AGE and GENDER are in the same field. So, if they wanted to 
+look at all of one GENDER or look at different age distributions, 
+it would be hard to do this using this data setup. If instead we put AGE and GENDER 
+in different columns, you can see that it would be much easier. 
 
-Data analysis in spreadsheets usually requires a lot of manual work. If you want to change a parameter or run an analysis with a new dataset, you usually have to redo everything by hand. (We do know that you can create macros, but see the next point.)
+### Columns for variables and rows for observations
 
-It is also difficult to track or reproduce statistical or plotting analyses done in spreadsheet programs when you want to go back to your work or someone asks for details of your analysis.
+The rule of thumb, when setting up a datasheet, is columns =
+variables, rows = observations, cells = data (values).
 
-> ###Exercise 
+So, instead we should have:
 
-How many people have used spreadsheets in their research?
-How many people have accidentally done something that made them frustrated or sad?
+![single-info example](../fig/01-format-data-image03.png)
 
-Spreadsheets encompass a lot of the things we need to be able to do as researchers. We can use them for:
+> ## Exercise
+> 
+> We're going to take a messy version of the study data and describe how we would clean it up. 
+>
+> 2. Open up the data in a spreadsheet program. 
+> 3. You can see that there are four tabs. Multiple study assistants recorded the exam data and they kept track of the data in their own way. Now you're the person in charge of this project and you want to be able to 
+start analyzing the data.   
+> 4. With the person next to you, identify what is wrong with this spreadsheet. Also discuss the steps you would need to take to clean up the b1, Sheet2, m12 and m18p tabs, and to put them all together in one spreadsheet. 
+>
+> **Important** Do not forget our first piece of advice: to
+> create a new file (or tab) for the cleaned data, never
+> modify your original (raw) data.
+> 
+> After you go through this exercise, we'll discuss as a group what was wrong
+> with this data and how you would fix it. 
+> 
+> > ## Solution
+> > - Take about 10 minutes to work on this exercise.
+> > - All the mistakes in [02-common-mistakes](../02-common-mistakes) are present in the messy dataset. If the
+> > exercise is done during a workshop, ask people what they saw as wrong with
+> > the data. As they bring up different points, you can refer to [02-common-mistakes](../02-common-mistakes)
+> > or expand a bit on the point they brought up.
+> > - If you get a response where they've fixed the date, you can pause and go to the [03-dates-as-data](../03-dates-as-data) lesson. Or you can say you'll come back to dates at the end. 
+> {: .solution}
+{: .challenge}
 
-Data entry
-Organizing data
-Subsetting and sorting data
-Statistics
-Plotting
-We do a lot of different operations in spreadsheets. What kind of operations do you do in spreadsheets? Which ones do you think spreadsheets are good for?
+An excellent reference, in particular with regard to R scripting is
 
-##Problems with Spreadsheets
+> Hadley Wickham, *Tidy Data*, Vol. 59, Issue 10, Sep 2014, Journal of
+> Statistical Software. [http://www.jstatsoft.org/v59/i10](http://www.jstatsoft.org/v59/i10).
 
-Spreadsheets are good for data entry, but in reality we tend to use spreadsheet programs for much more than data entry. We use them to create data tables for publications, to generate summary statistics, and make figures.
 
-Generating tables for publications in a spreadsheet is not optimal - often, when formatting a data table for publication, we’re reporting key summary statistics in a way that is not really meant to be read as data, and often involves special formatting (merging cells, creating borders, making it pretty). We advise you to do this sort of operation within your document editing software.
-
-The latter two applications, generating statistics and figures, should be used with caution: because of the graphical, drag and drop nature of spreadsheet programs, it can be very difficult, if not impossible, to replicate your steps (much less retrace anyone else’s), particularly if your stats or figures require you to do more complex calculations. Furthermore, in doing calculations in a spreadsheet, it’s easy to accidentally apply a slightly different formula to multiple adjacent cells. When using a command-line based statistics program like R or SAS, it’s practically impossible to apply a calculation to one observation in your dataset but not another unless you’re doing it on purpose.
-
-##Using Spreadsheets for Data Entry and Cleaning
-
-However, there are circumstances where you might want to use a spreadsheet program to produce “quick and dirty” calculations or figures, and data cleaning will help you use some of these features. Data cleaning also puts your data in a better format prior to importation into a statistical analysis program. We will show you how to use some features of spreadsheet programs to check your data quality along the way and produce preliminary summary statistics.
-
-In this lesson, we will assume that you are most likely using Excel as your primary spreadsheet program - there are others (gnumeric, Calc from OpenOffice), and their functionality is similar, but Excel seems to be the program most used by biologists and ecologists.
-
-In this lesson we’re going to talk about:
-
-Formatting data tables in spreadsheets
-Formatting problems
-Dates as data
-Quality control
-
-> ###Key Points
-
-Good data organization is the foundation of any research project.
 
