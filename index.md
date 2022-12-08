@@ -32,8 +32,6 @@ The data for this lesson and the workshop are in the Health Sciences Data Carpen
 
 The original datasets can be found here and used with approval ADNI Access Data and Samples
 
-#### About the data
-
 This data set requires downloading a DUA form and siging off prior to download. 
 For more information about the dataset 
 
