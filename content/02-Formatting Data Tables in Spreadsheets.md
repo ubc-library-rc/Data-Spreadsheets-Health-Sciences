@@ -1,4 +1,5 @@
 ---
+nav_order: 2
 title: "Quality control"
 teaching: 20
 exercises: 0
