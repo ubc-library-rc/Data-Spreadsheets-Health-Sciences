@@ -28,7 +28,6 @@ Download this data file to your computer: OSF Link
 
 The data for this lesson is a part of the Health Sciences Data Carpentry workshop. It is a teaching version of the Alzheimer’s Disease Neuroimaging Initiative (ADNI) data. The data in this lesson is a subset of the teaching version that has been intentionally ‘messed up’ for this lesson.
 
-The data for this lesson and the workshop are in the Health Sciences Data Carpentry data GitHub repository available on GitHub, with a CC-BY license available for reuse.
 
 The original datasets can be found here and used with approval ADNI Access Data and Samples
 
