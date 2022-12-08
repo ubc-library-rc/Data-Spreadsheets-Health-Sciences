@@ -1,4 +1,5 @@
 ---
+nav_order: 1
 title: "Formatting data tables in Spreadsheets"
 teaching: 15
 exercises: 20
