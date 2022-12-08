@@ -33,7 +33,7 @@ The original datasets can be found here and used with approval ADNI Access Data 
 
 #### About the data
 
-This data set requires downloading a DUA form and siging off prior to download. xxxxx etc etc etc
+This data set requires downloading a DUA form and siging off prior to download. 
 For more information about the dataset 
 
 ### Software
